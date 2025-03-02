@@ -1,2 +1,2 @@
 SELECT * FROM emp;
-SELECT * FROM debt;
+SELECT * FROM dept;
