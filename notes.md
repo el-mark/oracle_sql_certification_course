@@ -17,3 +17,6 @@ where job = 'MANAGER'
 and sal >= 2850
 and sal <= 2950
 ```
+
+## Operators
+<, >, <=, >=, =, 1=
