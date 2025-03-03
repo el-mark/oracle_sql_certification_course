@@ -38,20 +38,20 @@ and (total_spent < 100000 or total_spent = 220000)
 
 5. TRUE or FALSE Question: The keywords such as SELECT and WHERE must always be capital in the SQL Query.
 
-FALSE
+`FALSE`
 
 6. TRUE or FALSE Question: The database works on first processing the filtering conditions and then processes the FROM condition.
 
-FALSE
+`FALSE`
 
 7. TRUE or FALSE Question: Having just the filter condition shown below in a SQL query will return all of the records from the table. WHERE 1 = 1
 
-TRUE
+`TRUE`
 
 8. TRUE or FALSE question: NULL can not be compared using an equal sign.
 
-TRUE
+`TRUE`
 
 9. TRUE or FALSE question: The ORDER BY clause is processed before the FROM clause in a SQL statement and it's used to sort the columns in an ascending or descending fashion.
 
-FALSE
+`FALSE`
