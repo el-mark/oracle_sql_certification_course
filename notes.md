@@ -91,3 +91,24 @@ and (comm = 300 or comm > 1000);
 select * from emp
 where job like '%M%'
 ```
+
+## Ordering Concatenating and Aliasing
+```SQL
+select ename "Employee Name", sal as Salary, comm Commission
+from emp;
+
+select 'Hello, my name is ' || ename as "Concatenated Value"
+from emp;
+
+select ename || ' makes $' || sal || ' per month'
+as "Concatenated Salary"
+from emp;
+
+select ename, sal
+from emp
+order by ename;
+
+select ename, sal
+from emp
+order by sal desc;
+```
