@@ -41,4 +41,33 @@ join dept on emp.deptno = dept.deptno
 where loc = 'CHICAGO' or loc = 'DALLAS';
 ```
 
-code_for_combining_where_and_or_operators
+## BETWEEN, IN and NULL
+```SQL
+select ENAME, HIREDATE from emp
+where DEPTNO in (20, 30);
+
+select ENAME, HIREDATE from emp
+JOIN dept on emp.deptno = dept.deptno
+where loc in ('CHICAGO', 'DALLAS');
+
+select * from emp
+where sal > 1300
+and job not in ('CLERK', 'SALESMAN');
+
+select * from emp
+where sal between 1300 and 2000;
+
+select * from emp
+where hiredate not between '01/01/1981' and '12/09/1982';
+
+select * from emp
+where comm is null;
+
+select * from emp
+where comm is not null;
+
+select * from emp
+where comm is null
+and (sal between 1100 and 5000)
+and sal != 3000;
+```
