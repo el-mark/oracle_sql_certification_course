@@ -90,6 +90,11 @@ and (comm = 300 or comm > 1000);
 
 select * from emp
 where job like '%M%'
+
+select * from emp
+where 1 = 1
+AND (ename like '%K%'
+or ename like '%I%')
 ```
 
 ## Ordering Concatenating and Aliasing
@@ -111,4 +116,25 @@ order by ename;
 select ename, sal
 from emp
 order by sal desc;
+```
+
+## Single Row Functions (SRF) and The Dual Table
+```SQL
+select 'my name is ' || ename
+from emp;
+
+select concat('my name is ', ename) as Sentence
+from emp;
+
+select upper('hello')
+from emp;
+
+select upper('hello')
+from dual;
+
+select * from dual;
+
+select concat(concat(lower(ename), upper(' is the name')), concat(' and their job is: ', job)) as sentence
+from emp
+where deptno = 20;
 ```
