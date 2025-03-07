@@ -169,3 +169,24 @@ from emp;
 select ltrim('hhhhhello', 'h')
 from dual;
 ```
+
+## Numeric and Date SRF
+```SQL
+select round(107.1234, 2) from dual;
+
+select trunc(107.9294, 2) from dual;
+
+select sysdate from dual;
+
+select systimestamp from dual;
+
+select add_months('11/17/2012', 10) from dual;
+
+select months_between('12/4/2025', sysdate) from dual;
+
+select trunc(sysdate, 'YEAR') from dual;
+
+select ename, hiredate, trunc(hiredate, 'MONTH')
+from EMP
+where trunc(hiredate, 'YEAR') = '01/01/1982';
+```
