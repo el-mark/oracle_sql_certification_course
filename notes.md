@@ -138,3 +138,34 @@ select concat(concat(lower(ename), upper(' is the name')), concat(' and their jo
 from emp
 where deptno = 20;
 ```
+
+## Functions in WHERE clause and other SRF
+```SQL
+select *
+from emp
+where lower(job) = 'manager';
+
+select initcap('hello my name is mark') as sentence
+from dual;
+
+select length('hello my name is mark') as sentence
+from dual;
+
+select length(ename) as sentence
+from emp;
+
+select ename, length(ename)
+from emp
+where length(ename) = 6;
+
+select ename, substr(ename, 3, 1) as substring
+from emp;
+
+-- left padding
+select lpad(ename, 10, '-')
+from emp;
+
+-- left trim
+select ltrim('hhhhhello', 'h')
+from dual;
+```
