@@ -201,4 +201,20 @@ select to_char(3456.1, '$99,999.99') from dual;
 select ename, to_char(sal, '$99,999') as salaries from emp;
 select to_date('2012-08-27', 'yyyy-mm-dd') from dual;
 select add_months(to_date('2012-08-27', 'yyyy-mm-dd'), 2) from dual;
+select last_day(sysdate) from dual;
+select next_day(sysdate, 1) from dual;
+```
+
+## NVL and NULL_IF functions
+```SQL
+select ename, job, sal, nvl(comm, 0)
+from emp
+where empno in (7839, 7698, 7566, 7654);
+
+select ename, job, sal, NVL(to_char(comm), 'no data found')
+from emp
+where empno in (7839, 7698, 7566, 7654);
+
+select ename, length(ename), NVL(to_char(nullif(length(ename), 5)), 'length equal to 5')
+from emp;
 ```
