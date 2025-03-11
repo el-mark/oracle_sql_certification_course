@@ -5,6 +5,7 @@
         "ename",
         "ENAME",
         "hiredate",
-        "salgrade"
+        "salgrade",
+        "sysdate"
     ]
 }

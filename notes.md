@@ -190,3 +190,15 @@ select ename, hiredate, trunc(hiredate, 'MONTH')
 from EMP
 where trunc(hiredate, 'YEAR') = '01/01/1982';
 ```
+
+## Conversion SRF and Date Formatting
+```SQL
+select sysdate from dual;
+select to_char(sysdate, 'mm-dd-yyyy') from dual;
+select to_char(sysdate, 'dd-mm-yyyy') from dual;
+select to_char(sysdate, 'ddth "of" month, yyyy') from dual;
+select to_char(3456.1, '$99,999.99') from dual;
+select ename, to_char(sal, '$99,999') as salaries from emp;
+select to_date('2012-08-27', 'yyyy-mm-dd') from dual;
+select add_months(to_date('2012-08-27', 'yyyy-mm-dd'), 2) from dual;
+```
