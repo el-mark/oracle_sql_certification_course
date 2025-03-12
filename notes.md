@@ -218,3 +218,10 @@ where empno in (7839, 7698, 7566, 7654);
 select ename, length(ename), NVL(to_char(nullif(length(ename), 5)), 'length equal to 5')
 from emp;
 ```
+
+## Joining tables
+```SQL
+select *
+from emp
+join dept on emp.deptno = dept.deptno;
+```
